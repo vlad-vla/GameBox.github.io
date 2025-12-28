@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GameBox</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="body.css">
+</head>
+<body>
+  <div class="corner-logo">
+  <img src="logo.png" alt="GameBox Logo">
+</div>
+<header class="navbar">
+  <h1>GameBox</h1>
+  <nav>
+    <a href="#">Store</a>
+    <a href="#">Library</a>
+    <a href="#">Community</a>
+  </nav>
+</header>
+
+<section class="store">
+  <div class="game-card" onclick="openGame(
+    'Mosq mosquito 1 + 2',
+    'Run and survive.',
+    '$1',
+    'buy_link_here',
+    'https://i.postimg.cc/3yxXkdPk/image.png'
+  )">
+    <img src="https://img.itch.zone/aW1nLzIxMTYyNjE0LmpwZw==/original/88mHkd.jpg">
+    <div class="info">
+      <h2>Mosq mosquito 1 + 2</h2>
+      <p>$1</p>
+    </div>
+  </div>
+
+  <div class="game-card" onclick="openGame(
+    'Mosq mosquito 3',
+    'Run and survive.',
+    '$3',
+    'buy_link_here',
+    'https://img.itch.zone/aW1hZ2UvNDAyNTE1Ny8yNDAwMDM3MS5qcGc=/794x1000/QAdpL4.jpg'
+  )">
+    <img src="https://img.itch.zone/aW1nLzI0MDAwNDU5LnBuZw==/original/1ghRf4.png">
+    <div class="info">
+      <h2>Mosq mosquito 3</h2>
+      <p>$3</p>
+    </div>
+  </div>
+</section>
+
+<!-- FULLSCREEN MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeGame()">✖</span>
+
+    <img id="mImage" class="modal-image">
+
+    <h2 id="mTitle"></h2>
+    <p id="mDesc"></p>
+    <h3 id="mPrice"></h3>
+
+    <a id="buyLink" target="_blank">
+      <button class="buy-btn">Buy Game</button>
+    </a>
+  </div>
+</div>
+
+<script src="jsscript.js"></script>
+</body>
+</html>
